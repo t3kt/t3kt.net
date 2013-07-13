@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Tekt.Core.Entities.BlogEntry>
+@{
+    ViewBag.Title = "News";
+    if(ViewBag.Category != null)
+    {
+        ViewBag.Title += " Category: " + ViewBag.Category;
+    }
+}
+<style>
+    #main .project-item {
+        display: block;
+        max-width: initial;
+    }
+</style>
+@foreach (var entry in Model)
+{
+    @Html.Partial("Entity", entry)
+}

@@ -1,0 +1,22 @@
+﻿@model Tekt.Core.Entities.Image
+<figure class="project-item item-image">
+    <a href="@Model.DetailUrl">
+        <span class="t-icon t-icon-image"></span>
+    </a>
+    @{
+        var path = Model.Path.StartsWith("http") ? Model.Path : Url.Content("~/Content/" + Model.Path);
+        var thumb = Model.ThumbPath.StartsWith("http") ? Model.ThumbPath : Url.Content("~/Content/" + Model.ThumbPath);
+    }
+    <figcaption>
+        <a href="@Model.DetailUrl" target="_blank">@Model.Title</a>
+    </figcaption>
+    <a href="@path" class="image-grid-link" rel="images" title="@Model.Title">
+        @Html.Tag("img", attributes: new
+            {
+                Src = thumb,
+                Alt = Model.Title,
+                Width = Model.ThumbWidth,
+                Height = Model.ThumbHeight
+            })
+    </a>
+</figure>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project id="LinearChaosC" title="LinearChaos C"
+         basepath="Projects/LinearChaosC/"
+         blogcategories="linearchaos"
+         flickrsetid="72157634142099007"
+         vimeoalbumid="2388529"
+         githubrepo="linearchaos">
+  <description>
+    <p>
+      LinearChaos is a series of performance systems made with <a href="http://www.derivative.ca/" target="_blank">TouchDesigner</a>.<br/>
+      It has gone through several iterations and rewrites.
+    </p>
+    <p>
+      This is the third (and most recent) rewrite.<br/>
+      It uses completely new geometry and rendering systems.<br/>
+      I probably should have renamed it, but now I can't bring myself to do so.
+    </p>
+    <p>
+      The system is based on spacial and temporal distortion of geometric primitives.<br/>
+      It represents the interplay of simplicity and complexity. And I think it looks neat.
+    </p>
+    <p>The code for this project is available here: <a href="https://github.com/t3kt/linearchaos" target="_blank">on github</a>.</p>
+  </description>
+  <mainimage path="linearchaos-c.jpg" thumb="linearchaos-c-thumb.jpg" thumbwidth="480" thumbheight="270"/>
+  <!--<image path="images/linearchaos-c-output-2013.06.14-3.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.14-3.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.14-2.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.14-2.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.14-1.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.14-1.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.12-4.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.12-4.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.12-3.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.12-3.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.12-2.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.12-2.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.12-1.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.12-1.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.11-2-screenshot.png" width="1043" height="593" thumb="thumbs/linearchaos-c-output-2013.06.11-2-screenshot.png" thumbwidth="200" thumbheight="114"/>
+  <image path="images/linearchaos-c-output-2013.06.11-1-screenshot.png" width="1921" height="1020" thumb="thumbs/linearchaos-c-output-2013.06.11-1-screenshot.png" thumbwidth="200" thumbheight="106"/>
+  <image path="images/linearchaos-c-output-2013.06.07-2.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.07-2.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.06-4.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.06-4.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.06-3.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.06-3.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.06-2.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.06-2.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.06-1.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.06-1.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.05-2.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.05-2.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.05-1.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.05-1.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.03-1.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.03-1.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.03-2.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.03-2.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.03-3.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.03-3.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.03-4.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.03-4.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.03-5.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.03-5.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.03-6.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.03-6.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.03-7.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.03-7.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.06.03-8.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.06.03-8.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.23-5.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.23-5.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.23-4.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.23-4.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.23-3.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.23-3.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.23-2.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.23-2.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.16-5.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.16-5.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.16-4.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.16-4.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.16-3.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.16-3.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.16-1.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.16-1.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.15-5.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.15-5.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.15-4.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.15-4.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.15-3.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.15-3.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.15-2.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.15-2.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.15-1.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.15-1.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.08-7-screenshot.png" width="1920" height="1010" thumb="thumbs/linearchaos-c-output-2013.05.08-7-screenshot.png" thumbwidth="200" thumbheight="105"/>
+  <image path="images/linearchaos-c-output-2013.05.08-6-screenshot.png" width="1920" height="1017" thumb="thumbs/linearchaos-c-output-2013.05.08-6-screenshot.png" thumbwidth="200" thumbheight="106"/>
+  <image path="images/linearchaos-c-output-2013.05.08-5-screenshot.png" width="1920" height="1009" thumb="thumbs/linearchaos-c-output-2013.05.08-5-screenshot.png" thumbwidth="200" thumbheight="105"/>
+  <image path="images/linearchaos-c-output-2013.05.08-4.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.08-4.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.08-4-screenshot.jpg" width="1920" height="1014" thumb="thumbs/linearchaos-c-output-2013.05.08-4-screenshot.jpg" thumbwidth="200" thumbheight="106"/>
+  <image path="images/linearchaos-c-output-2013.05.08-3.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.08-3.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.08-2.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.08-2.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.08-1.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.08-1.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.05.05-1.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.05.05-1.jpg" thumbwidth="200" thumbheight="113"/>
+  <image path="images/linearchaos-c-output-2013.04.24-1.jpg" width="960" height="540" thumb="thumbs/linearchaos-c-output-2013.04.24-1.jpg" thumbwidth="200" thumbheight="113"/>-->
+  <!--<video title="linearchaos-c-output-2013.06.07-1" embedurl="http://player.vimeo.com/video/67923868?byline=0&amp;portrait=0" embedwidth="284" embedheight="160" posted="2013-06-07T19:43:00.000Z"/>
+  <video title="linearchaos-c-output-2013.04.19-1" embedurl="http://player.vimeo.com/video/64365608?byline=0&amp;portrait=0" embedwidth="284" embedheight="160" posted="2013-04-20T04:26:00.000Z"/>
+  <video title="linearchaos-c-output-2013.05.16-2" embedurl="http://player.vimeo.com/video/66372491?byline=0&amp;portrait=0" embedwidth="284" embedheight="160" posted="2013-05-17T02:42:00.000Z"/>
+  <video title="linearchaos-c-output-2013.05.01-5" embedurl="http://player.vimeo.com/video/65273089?byline=0&amp;portrait=0" embedwidth="284" embedheight="160" posted="2013-05-02T03:08:00.000Z"/>
+  <video title="linearchaos-c-output-2013.05.16-2" embedurl="http://player.vimeo.com/video/66372491?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos-c-output-2013.04.03-1" embedurl="http://player.vimeo.com/video/63298189?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos-c-output-2013.03.25-4" embedurl="http://player.vimeo.com/video/62669671?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos-c-output-2013.03.25-3" embedurl="http://player.vimeo.com/video/62666771?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos-c-output-2013.03.25-2" embedurl="http://player.vimeo.com/video/62665678?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>-->
+</project>

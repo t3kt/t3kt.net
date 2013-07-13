@@ -1,0 +1,21 @@
+﻿@{
+    var controller = (string)ViewContext.RouteData.Values["controller"];
+    var currentClass = new Dictionary<string, object> {{"class", "nav-current"}};
+    var id = (string) ViewContext.RouteData.Values["id"];
+}
+<nav id="main-nav">
+    @Html.ActionLink("home", "Index", "Home", null, controller == "Home" ? currentClass : null)
+    @Html.ActionLink("news", "Index", "News", null, controller == "News" ? currentClass : null)
+    @Html.ActionLink("projects", "Index", "Projects", null, controller == "Projects" ? currentClass : null)
+    @if (controller == "Projects")
+    {
+        <nav class="sub-nav">
+            @foreach (var project in TetkSys.Core.Data.TetkDB.Instance.GetProjects())
+            {
+                @Html.ActionLink(project.Title, "Details", "Projects", new RouteValueDictionary{{"id", project.Code}}, id == project.Code ? currentClass : null )
+            }
+        </nav>
+    }
+    <a href="https://vimeo.com/tetk">vimeo</a>
+    <a href="https://www.facebook.com/tetksys">facebook</a>
+</nav>

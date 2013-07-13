@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>tekt: @ViewBag.Title</title>
+    <script>
+        (function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-41056285-1', 'tetksys.com'); ga('send', 'pageview');
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="//reset5.googlecode.com/hg/reset.min.css"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Resources/main.css")"/>
+    @RenderSection("head", false)
+</head>
+    <body>
+        <header>
+            <h1>@Html.ActionLink("tekt", "Index", "Home")</h1>
+            <h2>@ViewBag.Title</h2>
+            <br/>
+            @Html.Partial("NavMenu")
+        </header>
+        <div id="main">
+            @RenderBody()
+        </div>
+    </body>
+</html>

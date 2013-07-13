@@ -1,0 +1,41 @@
+﻿@model TetkSys.Core.Data.ProjectInfo
+@{
+    ViewBag.Title = "project: " + Model.Title;
+}
+@section head
+{
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.css"/>
+    <script type="text/javascript">
+        $(function () { $(".image-grid-link").fancybox(); });
+    </script>
+}
+<article class="project-details">
+    <div class="project-description">
+        @Html.Raw(Model.Description)
+    </div>
+    <a href="@Url.Content("~/Content/" + Model.ImagePath)" class="image-grid-link" rel="images">
+        <img class="project-thumb" src="@Url.Content("~/Content/"+Model.ThumbPath)" alt="@Model.Title"/>
+    </a>
+    <div class="project-details">
+        <div class="image-grid">
+            @foreach (var image in Model.GetImages())
+            {
+                <span class="image-grid-item">
+                    <a href="@Url.Content("~/Content/" + image.Path)" class="image-grid-link" rel="@ViewBag.Group">
+                        <img src="@Url.Content("~/Content/" + image.ThumbPath)" alt="@image.AltText"/>
+                    </a>
+                </span>
+            }
+        </div>
+        <div class="image-grid">
+            @foreach (var video in Model.GetVideos())
+            {
+                <span class="image-grid-item">
+                    <iframe src="@video.EmbedUrl" width="@video.Width" height="@video.Height"
+                         frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </span>
+            }
+        </div>
+    </div>
+</article>

@@ -1,0 +1,25 @@
+﻿@{
+    var controller = (string)ViewContext.RouteData.Values["controller"];
+    var action = (string)ViewContext.RouteData.Values["action"];
+    var currentClass = new Dictionary<string, object> { { "class", "nav-link nav-current" } };
+    var nonCurrentClass = new Dictionary<string, object> { { "class", "nav-link" } };
+    var id = (string)ViewContext.RouteData.Values["id"];
+}
+<nav id="main-nav" class="t-ui-panel">
+    @Html.ActionLink("about", "About", "Home", null, controller == "Home" && action == "About" ? currentClass : nonCurrentClass )
+    @Html.ActionLink("news", "Index", "News", null, controller == "News" ? currentClass : nonCurrentClass)
+    @Html.ActionLink("projects", "Index", "Projects", null, controller == "Projects" && String.IsNullOrWhiteSpace(id) ? currentClass : nonCurrentClass)
+    @*@if(controller == "Projects")
+    {
+        *@<nav class="sub-nav">
+              @foreach(var project in Tekt.Core.Data.TektData.Instance.GetProjectList())
+              {
+                  @Html.ActionLink(project.Title, "Details", "Projects", new RouteValueDictionary { { "id", project.Id } }, controller == "Projects" && String.Equals(id, project.Id, StringComparison.OrdinalIgnoreCase) ? currentClass : nonCurrentClass)
+              }
+          </nav>
+    @*}*@
+    <a href="https://www.facebook.com/tetksys" target="_blank">facebook</a>
+    <a href="https://vimeo.com/tekt" target="_blank">vimeo</a>
+    <a href="https://www.flickr.com/photos/t3kt/" target="_blank">flickr</a>
+    <a href="https://github.com/t3kt" target="_blank">github</a>
+</nav>

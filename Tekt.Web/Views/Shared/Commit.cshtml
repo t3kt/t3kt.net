@@ -1,0 +1,14 @@
+﻿@model Tekt.Core.Entities.Commit
+<article class="commit project-item" id="@Model.Id">
+    <a href="@Model.DetailUrl" title="github commit">
+        <span class="t-icon t-icon-commit"></span>
+    </a>
+    @if (Model.Posted != null)
+    {
+        <div class="project-item-date">@Model.Posted</div>
+    }
+    <div class="project-item-content">
+        @Model.Title
+    </div>
+    <a href="@Model.DetailUrl" target="_blank">browse code</a>
+</article>

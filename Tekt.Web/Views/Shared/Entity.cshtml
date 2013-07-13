@@ -1,0 +1,18 @@
+﻿@using Tekt.Core.Entities
+@model TektEntity
+@if(Model is Video)
+{
+    @Html.Partial("Video", Model)
+}
+else if (Model is Image)
+{
+    @Html.Partial("Image", Model)
+}
+else if (Model is BlogEntry)
+{
+    @Html.Partial("BlogEntry", Model)
+}
+else if (Model is Commit)
+{
+    @Html.Partial("Commit", Model)
+}

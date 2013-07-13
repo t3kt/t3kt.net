@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tetkdb" Class="TetkDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\thezer0ist\tetksys\TetkSys\TetkSys.Web\App_Data\tetkdb.mdf;Integrated Security=True" SettingsObjectName="TetkSys.Core.Properties.Settings" SettingsPropertyName="tetkdbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Projects" Member="Projects">
+    <Type Name="Project">
+      <Column Name="Code" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Summary" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ThumbPath" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Project_Image" Member="Images" ThisKey="Code" OtherKey="ProjectCode" Type="Image" />
+      <Association Name="Project_Video" Member="Videos" ThisKey="Code" OtherKey="ProjectCode" Type="Video" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Images" Member="Images">
+    <Type Name="Image">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ThumbPath" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ProjectCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Posted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Project_Image" Member="Project" ThisKey="ProjectCode" OtherKey="Code" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Videos" Member="Videos">
+    <Type Name="Video">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ThumbPath" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ProjectCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Posted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ViewUrl" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="EmbedUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EmbedWidth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmbedHeight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Project_Video" Member="Project" ThisKey="ProjectCode" OtherKey="Code" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

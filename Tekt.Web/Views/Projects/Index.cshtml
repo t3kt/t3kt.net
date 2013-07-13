@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Tekt.Core.Entities.Project>
+
+@{
+    ViewBag.Title = "projects";
+}
+
+
+@foreach(var project in Model)
+{
+    <div class="project-summary">
+        <h3>
+            @Html.ActionLink(project.Title, "Details", new RouteValueDictionary { { "id", project.Id } })
+        </h3>
+        @if(project.MainImage != null)
+        {
+            <a href="@Url.Action("Details", "Projects", new RouteValueDictionary { { "id", project.Id } })" class="nav-link">
+                @Html.Tag("img", "project-thumb", null, new
+                {
+                    Src = Url.Content("~/Content/" + project.MainImage.ThumbPath),
+                    Alt = project.MainImage.Title ?? project.Title,
+                    project.MainImage.ThumbWidth,
+                    project.MainImage.ThumbHeight
+                })
+            </a>
+        }
+        <div class="project-description">
+            @Html.ContentXml(project.Summary ?? project.Description)
+        </div>
+    </div>
+}

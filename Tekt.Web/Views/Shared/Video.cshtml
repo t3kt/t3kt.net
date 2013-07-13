@@ -1,0 +1,23 @@
+﻿@model Tekt.Core.Entities.Video
+<figure class="project-item item-video" id="@Model.Id">
+    <span class="t-icon t-icon-video"></span>
+    <figcaption>
+        @if(Model.DetailUrl != null)
+        {
+            <a href="@Model.DetailUrl" target="_blank">@Model.Title</a>
+        }
+        else
+        {
+            @Model.Title
+        }
+    </figcaption>
+    @if(Model.Embed != null)
+    {
+        @Html.Raw(Model.Embed)
+    }
+    else
+    {
+        <iframe src="@Model.EmbedUrl" width="@Model.EmbedWidth" height="@Model.EmbedHeight"
+                    frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    }
+</figure>

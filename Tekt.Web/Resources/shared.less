@@ -1,0 +1,235 @@
+﻿@import "_common.less";
+
+body
+{
+  background-color: @page-bg-color;
+  font-family: sans-serif;
+  padding: 1em;
+  color: @text-color;
+}
+
+a, a h1
+{
+  color: @text-color;
+}
+
+h1 a, h2 a, h3 a, h4 a, figcaption a, h5 a, h6 a, #main-nav a, .image-grid a, .project-summary a
+{
+  text-decoration: initial;
+}
+
+header
+{
+  margin: 0;
+  padding: 0;
+
+  h1, h2
+  {
+    display: inline-block;
+    text-transform: lowercase;
+  }
+
+  h1
+  {
+    padding: .4em .3em;
+    font-size: 2em;
+  }
+
+  h2
+  {
+    margin-left: 6em;
+    font-size: 1.2em;
+  }
+}
+
+#main
+{
+  background-color: @main-bg-color;
+}
+
+#main-nav, header h2
+{
+  background-color: @panel-bg-color-backup;
+  background-color: @panel-bg-color;
+}
+
+#main-nav
+{
+  nav
+  {
+    margin-left: 1em;
+    margin-top: 1px;
+    margin-bottom: 4px;
+  }
+
+  a
+  {
+    display: block;
+    text-transform: lowercase;
+
+    &:hover, &.nav-current
+    {
+      background-color: @text-color;
+      color: @panel-bg-color-backup;
+    }
+  }
+
+  & > a:first-child
+  {
+    border-top-right-radius: .5em;
+  }
+
+  & > a:last-child
+  {
+    border-bottom-right-radius: .5em;
+    margin-bottom: 0;
+  }
+}
+
+  #main-nav a, header h1 a
+  {
+    padding: .4em 1em;
+  }
+
+.item-image
+{
+  margin-bottom: .2em;
+  display: inline-block;
+}
+
+.project-item
+{
+  border: solid 1px;
+  padding: .5em 1em;
+  border-radius: .4em;
+  margin: .2em;
+  display: inline-block;
+  max-width: 48em;
+  vertical-align: top;
+  min-width: 14em;
+  min-height: 8em;
+
+  h3,
+  h4, figcaption
+  {
+    font-weight: bold;
+    margin-bottom: .2em;
+  }
+
+  h4, figcaption
+  {
+    opacity: .4;
+    transition: opacity .5s;
+  }
+
+  &:hover
+  {
+    h4, figcaption
+    {
+      opacity: 1;
+      transition: opacity .5s;
+    }
+  }
+}
+
+
+.item-image, .item-video
+{
+  text-align: center;
+}
+
+.project-summary
+{
+  border: solid 1px;
+  padding: .5em 1em;
+  border-radius: .4em;
+  margin-bottom: .6em;
+}
+
+  .project-summary h3, .blog-entry h3
+  {
+    margin-bottom: .4em;
+    font-size: 1.4em;
+  }
+
+.project-description
+{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1em;
+}
+
+  .project-description p
+  {
+    margin-bottom: 1em;
+  }
+
+.project-details .project-thumb,
+.project-item-date
+{
+  float: right;
+}
+
+.project-details .project-description,
+.project-item-content
+{
+  margin-bottom: 2em;
+}
+
+.t-tag
+{
+  margin-right: .4em;
+}
+
+#wait-overlay
+{
+  background: #666;
+  opacity: .4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  cursor: wait;
+}
+
+#wait-image
+{
+  width: 31px;
+  height: 31px;
+  background-image: url(ajax-loader.gif);
+  display: block;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  z-index: 110;
+}
+
+.t-icon
+{
+  background-repeat: no-repeat;
+  background-position: top left;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  float: left;
+}
+
+.t-icon-commit
+{
+  background-image: url(github-32.png);
+}
+.t-icon-video
+{
+  background-image: url(vimeo-32.png);
+}
+.t-icon-image
+{
+  background-image: url(flickr-32.png);
+}
+.t-icon-blog
+{
+  background-image: url(blogger-32.png);
+}

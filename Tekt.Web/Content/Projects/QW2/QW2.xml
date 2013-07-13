@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project id="QW2" title="QW2"
+         basepath="Projects/QW2/"
+         flickrsetid="72157634290615853"
+         vimeoalbumid="2434437">
+  <summary>
+    QW2 is a performance system built with VVVV.
+  </summary>
+  <description>
+    <p>
+      QW2 is a performance system built with VVVV.
+    </p>
+  </description>
+  <mainimage path="qw2.png" thumb="qw2-thumb.png" thumbwidth="480" thumbheight="270"/>
+  <!--<image path="images/_qw2.main-qw2out_2012.02.01-21.34.58.png" thumb="thumbs/_qw2.main-qw2out_2012.02.01-21.34.58.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.01-21.35.07.png" thumb="thumbs/_qw2.main-qw2out_2012.02.01-21.35.07.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.01-21.35.30.png" thumb="thumbs/_qw2.main-qw2out_2012.02.01-21.35.30.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.01-21.35.32.png" thumb="thumbs/_qw2.main-qw2out_2012.02.01-21.35.32.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.01-21.35.34.png" thumb="thumbs/_qw2.main-qw2out_2012.02.01-21.35.34.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.01-21.35.47.png" thumb="thumbs/_qw2.main-qw2out_2012.02.01-21.35.47.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.01-21.35.48.png" thumb="thumbs/_qw2.main-qw2out_2012.02.01-21.35.48.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.01-21.36.00.png" thumb="thumbs/_qw2.main-qw2out_2012.02.01-21.36.00.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.01-21.36.02.png" thumb="thumbs/_qw2.main-qw2out_2012.02.01-21.36.02.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.14-17.47.05.png" thumb="thumbs/_qw2.main-qw2out_2012.02.14-17.47.05.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.14-17.47.08.png" thumb="thumbs/_qw2.main-qw2out_2012.02.14-17.47.08.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.14-17.47.14.png" thumb="thumbs/_qw2.main-qw2out_2012.02.14-17.47.14.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.14-17.47.15.png" thumb="thumbs/_qw2.main-qw2out_2012.02.14-17.47.15.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.14-17.47.16.png" thumb="thumbs/_qw2.main-qw2out_2012.02.14-17.47.16.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.14-17.50.53.png" thumb="thumbs/_qw2.main-qw2out_2012.02.14-17.50.53.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.15-20.41.15.png" thumb="thumbs/_qw2.main-qw2out_2012.02.15-20.41.15.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.15-20.41.16.png" thumb="thumbs/_qw2.main-qw2out_2012.02.15-20.41.16.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.15-21.01.48.png" thumb="thumbs/_qw2.main-qw2out_2012.02.15-21.01.48.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.15-21.01.51.png" thumb="thumbs/_qw2.main-qw2out_2012.02.15-21.01.51.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.15-21.01.59.png" thumb="thumbs/_qw2.main-qw2out_2012.02.15-21.01.59.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.15-21.02.00.png" thumb="thumbs/_qw2.main-qw2out_2012.02.15-21.02.00.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.21-22.50.22.png" thumb="thumbs/_qw2.main-qw2out_2012.02.21-22.50.22.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.21-22.51.09.png" thumb="thumbs/_qw2.main-qw2out_2012.02.21-22.51.09.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.21-22.51.39.png" thumb="thumbs/_qw2.main-qw2out_2012.02.21-22.51.39.png"/>
+  <image path="images/_qw2.main-qw2out_2012.02.21-22.51.54.png" thumb="thumbs/_qw2.main-qw2out_2012.02.21-22.51.54.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.11.22-22.59.13.png" thumb="thumbs/_qw2.main-qw2renderer_2011.11.22-22.59.13.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.11.22-22.59.15.png" thumb="thumbs/_qw2.main-qw2renderer_2011.11.22-22.59.15.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.11.22-22.59.17.png" thumb="thumbs/_qw2.main-qw2renderer_2011.11.22-22.59.17.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.11.22-22.59.28.png" thumb="thumbs/_qw2.main-qw2renderer_2011.11.22-22.59.28.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.11.22-22.59.29.png" thumb="thumbs/_qw2.main-qw2renderer_2011.11.22-22.59.29.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.11.22-22.59.30.png" thumb="thumbs/_qw2.main-qw2renderer_2011.11.22-22.59.30.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.11.22-23.00.02.png" thumb="thumbs/_qw2.main-qw2renderer_2011.11.22-23.00.02.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.11.22-23.00.14.png" thumb="thumbs/_qw2.main-qw2renderer_2011.11.22-23.00.14.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.11.22-23.00.15.png" thumb="thumbs/_qw2.main-qw2renderer_2011.11.22-23.00.15.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.12.05-18.43.47.png" thumb="thumbs/_qw2.main-qw2renderer_2011.12.05-18.43.47.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.12.05-18.44.05.png" thumb="thumbs/_qw2.main-qw2renderer_2011.12.05-18.44.05.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.12.05-18.44.07.png" thumb="thumbs/_qw2.main-qw2renderer_2011.12.05-18.44.07.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.12.05-18.44.11.png" thumb="thumbs/_qw2.main-qw2renderer_2011.12.05-18.44.11.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.12.05-18.44.18.png" thumb="thumbs/_qw2.main-qw2renderer_2011.12.05-18.44.18.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.12.05-18.44.20.png" thumb="thumbs/_qw2.main-qw2renderer_2011.12.05-18.44.20.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.12.05-18.44.27.png" thumb="thumbs/_qw2.main-qw2renderer_2011.12.05-18.44.27.png"/>
+  <image path="images/_qw2.main-qw2renderer_2011.12.05-18.44.28.png" thumb="thumbs/_qw2.main-qw2renderer_2011.12.05-18.44.28.png"/>-->
+  <!--<image path="images/_qw2-screenshot_2011.12.05-18.49.02.png" thumb="thumbs/_qw2-screenshot_2011.12.05-18.49.02.png"/>
+	<image path="images/_qw-screenshot_2011.11.22-23.15.07.png" thumb="thumbs/_qw-screenshot_2011.11.22-23.15.07.png"/>
+	<image path="images/_qw2.main_2011.11.26-13.54.45.png" thumb="thumbs/_qw2.main_2011.11.26-13.54.45.png"/>-->
+  <!--<video title="qw2 render 2012-02-21" embedurl="http://player.vimeo.com/video/46848221?byline=0&amp;portrait=0" embedwidth="284" embedheight="168"/>-->
+</project>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project id="LinearChaosA" title="LinearChaos A"
+         basepath="Projects/LinearChaosA/"
+         vimeoalbumid="2434451">
+  <summary>
+    LinearChaos is a series of performance systems made with TouchDesigner.<br/> It has gone through several iterations and rewrites.<br/> This is the original iteration.
+  </summary>
+  <details>
+    <p>
+      LinearChaos is a series of performance systems made with <a href="http://www.derivative.ca/" target="_blank">TouchDesigner</a>.<br/>
+      It has gone through several iterations and rewrites.
+    </p>
+    <p> 
+      This is the original iteration.
+    </p>
+    <p>
+      The code for this project is available here: <a href="https://github.com/t3kt/linearchaos" target="_blank">on github</a>.
+    </p>
+  </details>
+  <mainimage path="linearchaos-a.jpg" thumb="linearchaos-a-thumb.jpg" thumbwidth="480" thumbheight="270"/>
+  <!--<video title="linearchaos-output-2012.10.04-22-dangerous-drive" embedurl="http://player.vimeo.com/video/50805777?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos-output-2012.09.21-19" embedurl="http://player.vimeo.com/video/49952507?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos-output-2012.09.20-18" embedurl="http://player.vimeo.com/video/49878162?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos output 2012.08.01 1" embedurl="http://player.vimeo.com/video/46781909?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos output 2012.07.11 1" embedurl="http://player.vimeo.com/video/46253746?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos output 2012.07.22 1" embedurl="http://player.vimeo.com/video/46203879?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>-->
+</project>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project id="LinearChaosB" title="LinearChaos B"
+         basepath="Projects/LinearChaosB/"
+         vimeoalbumid="2434449">
+  <description>
+    <p>
+      LinearChaos is a series of performance systems made with <a href="http://www.derivative.ca/" target="_blank">TouchDesigner</a>.<br/>
+      It has gone through several iterations and rewrites.
+    </p>
+    <p>
+      This is the second rewrite.<br/>
+      It is fairly similar to the first linearchaos system, with some rewritten back-end systems and     an enhanced control interface.
+    </p>
+    <p>
+      The code for this project is available here: <a href="https://github.com/t3kt/linearchaos" target="_blank">on github</a>.
+    </p>
+  </description>
+  <mainimage path="linearchaos-b.jpg" thumb="linearchaos-b-thumb.jpg" thumbwidth="480" thumbheight="270"/>
+  <!--<video title="linearchaos-output-2012.12.18-6" embedurl="http://player.vimeo.com/video/55912335?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos-output-2012.11.21-2-goto10" embedurl="http://player.vimeo.com/video/54051918?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>
+  <video title="linearchaos-output-2012.11.08-22-goto10" embedurl="http://player.vimeo.com/video/53116877?byline=0&amp;portrait=0" embedwidth="284" embedheight="160"/>-->
+</project>

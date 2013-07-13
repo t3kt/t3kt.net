@@ -1,0 +1,78 @@
+﻿@model IEnumerable<TetkSys.Core.Data.ProjectInfo>
+
+@{
+    ViewBag.Title = "projects";
+}
+
+@*<ul class="projects">
+    @foreach (var project in Model)
+    {
+        <li class="project-index-entry">
+            <div class="project-title">
+                @Html.ActionLink(project.Title, "Details", new RouteValueDictionary{{"id", project.Code}})
+            </div>
+        </li>
+    }
+</ul>*@
+<div class="projects">
+    <div class="project-summary">
+        <a href="@Url.Action("LinearChaosC")">
+            <h1>linearchaos [c]</h1>
+            <img class="project-thumb" src="@Url.Content("~/Content/Projects/linearchaos-c-thumb.jpg")" alt="linearchaos c"/>
+        </a>
+        <div class="project-description">
+            LinearChaos is a series of performance systems made with TouchDesigner.<br/>
+            It has gone through several iterations and rewrites.<br/>
+            This is the third (and most recent) rewrite.<br/>
+            It uses completely new geometry and rendering systems.<br/>
+            I probably should have renamed it.
+        </div>
+    </div>
+    <div class="project-summary">
+        <a href="@Url.Action("LinearChaosB")">
+            <h1>linearchaos [b]</h1>
+            <img class="project-thumb" src="@Url.Content("~/Content/Projects/linearchaos-b-thumb.jpg")" alt="linearchaos b"/>
+        </a>
+        <div class="project-description">
+            LinearChaos is a series of performance systems made with TouchDesigner.<br/>
+            It has gone through several iterations and rewrites.<br/>
+            This is the second rewrite.<br/>
+            It is fairly similar to the first linearchaos system, with some rewritten back-end systems and
+            an enhanced control interface.
+        </div>
+    </div>
+    <div class="project-summary">
+        <h1>linearchaos [a]</h1>
+        <a href="@Url.Action("LinearChaosA")">
+            <img class="project-thumb" src="@Url.Content("~/Content/Projects/linearchaos-a-thumb.jpg")" alt="linearchaos a"/>
+        </a>
+        <div class="project-description">
+            LinearChaos is a series of performance systems made with TouchDesigner.<br/>
+            It has gone through several iterations and rewrites.<br/>
+            This is the original iteration.
+        </div>
+    </div>
+    <div class="project-summary">
+        <h1>qw2</h1>
+        <a href="@Url.Action("QW2")">
+            <img class="project-thumb" src="@Url.Content("~/Content/Projects/qw2-thumb.png")" alt="qw2"/>
+        </a>
+        <div class="project-description">
+            QW2 is a performance system built with VVVV.
+        </div>
+    </div>
+    @foreach (var project in Model)
+    {
+        <div class="project-summary">
+            <h1>@project.Title</h1>
+            <a href="@Url.Action("Details", new RouteValueDictionary{{"id", project.Code}})">
+                <img class="project-thumb" src="@Url.Content("~/Content/" + project.ThumbPath)" alt="@project.Title"/>
+            </a>
+            <div class="project-description">
+                @Html.Raw(project.Summary ?? project.Description)
+            </div>
+        </div>
+    }
+</div>
+
+

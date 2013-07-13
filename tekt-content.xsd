@@ -1,0 +1,75 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="project">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="summary" minOccurs="0">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:any maxOccurs="unbounded" minOccurs="0" processContents="skip"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="description" minOccurs="0">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:any maxOccurs="unbounded" minOccurs="0" processContents="skip"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mainimage" type="image" minOccurs="0"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="projectitem"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required"/>
+      <xs:attribute name="title" use="required"/>
+      <xs:attribute name="basepath"/>
+      <xs:attribute name="blogcategories"/>
+      <xs:attribute name="flickrsetid"/>
+      <xs:attribute name="vimeoalbumid"/>
+      <xs:attribute name="githubrepo"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="index">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+          <xs:complexType>
+            <xs:attribute name="id" use="required"/>
+            <xs:attribute name="title"/>
+            <xs:attribute name="path"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="basepath"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="image" substitutionGroup="projectitem" type="image"/>
+  <xs:complexType name="projectitem">
+    <xs:attribute name="title"/>
+    <xs:attribute name="thumb"/>
+    <xs:attribute name="posted" type="xs:dateTime"/>
+  </xs:complexType>
+  <xs:element abstract="true" name="projectitem" type="projectitem"/>
+  <xs:element name="video" substitutionGroup="projectitem">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="projectitem">
+          <xs:attribute name="viewurl"/>
+          <xs:attribute name="embedurl"/>
+          <xs:attribute name="embedwidth" type="xs:int"/>
+          <xs:attribute name="embedheight" type="xs:int"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="image">
+    <xs:complexContent>
+      <xs:extension base="projectitem">
+        <xs:attribute name="path"/>
+        <xs:attribute name="height" type="xs:int"/>
+        <xs:attribute name="width" type="xs:int"/>
+        <xs:attribute name="thumbheight" type="xs:int"/>
+        <xs:attribute name="thumbwidth" type="xs:int"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

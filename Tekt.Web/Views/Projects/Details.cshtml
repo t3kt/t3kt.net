@@ -1,0 +1,64 @@
+﻿@using Tekt.Core.Data
+@using Tekt.Core.Entities
+@model Dictionary<string, object>
+@{
+    var project = (Project)Model["project"];
+    //var entries = (IEnumerable<BlogEntry>)Model["entries"];
+    ViewBag.Title = "project: " + project.Title;
+    //var images = ((IEnumerable<Image>) Model["images"]).Concat(project.Items.OfType<Image>());
+    //var videos = ((IEnumerable<Video>) Model["videos"]).Concat(project.Items.OfType<Video>());
+    var items = (IEnumerable<TektEntity>)Model["items"];
+}
+@section head
+{
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.pack.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.css" />
+    
+    <script type="text/javascript">
+        $(function ()
+        {
+            $(".image-grid-link").fancybox();
+
+            @*tekt.waitStart();
+            $.get('@Url.Action("Items", new RouteValueDictionary { { "id", project.Id } })')
+                .done(function (data)
+                {
+                    $('#project-items').empty().append(data);
+                })
+                .always(function ()
+                {
+                    tekt.waitEnd();
+                });*@
+        });
+    </script>
+
+
+}
+<article class="project-details">
+    <div class="project-description">
+        @Html.ContentXml(project.Description ?? project.Summary)
+    </div>
+    @if(project.MainImage != null)
+    {
+        <a href="@Url.Content("~/Content/" + project.MainImage.Path)" class="image-grid-link" rel="images">
+            @Html.Tag("img", "project-thumb", null, new
+                    {
+                        Src = Url.Content("~/Content/" + project.MainImage.ThumbPath),
+                        Alt = project.MainImage.Title ?? project.Title,
+                        Width = project.MainImage.ThumbWidth,
+                        Height = project.MainImage.ThumbHeight
+                    })
+        </a>
+    }
+    @{
+        
+    }
+    <div id="project-items" class="project-details">
+        @foreach(var item in items)
+        {
+            @Html.Partial("Entity", item)
+        }
+    </div>
+</article>

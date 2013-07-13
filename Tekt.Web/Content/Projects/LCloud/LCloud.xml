@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project id="LCloud" basepath="Projects/LCloud/" title="LCloud">
+  <summary>
+    LCloud is a performance system in VVVV.
+  </summary>
+  <description>
+    LCloud is a performance system in VVVV.
+  </description>
+  <mainimage path="lcloud.png" thumb="lcloud-thumb.png" thumbheight="480" thumbwidth="270" height="600" width="800"/>
+  <image path="images/lcloud-capture.2011.03.03 18.42.30.png" width="800" height="600" thumb="thumbs/lcloud-capture.2011.03.03 18.42.30.png" thumbwidth="200" thumbheight="150"/>
+  <image path="images/lcloud-capture.2011.02.27 23.33.42.png" width="800" height="600" thumb="thumbs/lcloud-capture.2011.02.27 23.33.42.png" thumbwidth="200" thumbheight="150"/>
+  <image path="images/lcloud-capture.2011.02.27 23.11.22.png" width="800" height="600" thumb="thumbs/lcloud-capture.2011.02.27 23.11.22.png" thumbwidth="200" thumbheight="150"/>
+  <image path="images/lcloud-capture.2011.02.27 23.11.14.png" width="800" height="600" thumb="thumbs/lcloud-capture.2011.02.27 23.11.14.png" thumbwidth="200" thumbheight="150"/>
+  <image path="images/lcloud-capture.2011.02.27 22.48.43.png" width="800" height="600" thumb="thumbs/lcloud-capture.2011.02.27 22.48.43.png" thumbwidth="200" thumbheight="150"/>
+  <image path="images/lcloud-capture.2011.02.22 21.43.13.png" width="340" height="340" thumb="thumbs/lcloud-capture.2011.02.22 21.43.13.png" thumbwidth="200" thumbheight="200"/>
+  <image path="images/lcloud-capture.2011.02.22 21.34.42.png" width="340" height="340" thumb="thumbs/lcloud-capture.2011.02.22 21.34.42.png" thumbwidth="200" thumbheight="200"/>
+  <image path="images/lcloud-capture.2011.02.22 21.29.44.png" width="340" height="340" thumb="thumbs/lcloud-capture.2011.02.22 21.29.44.png" thumbwidth="200" thumbheight="200"/>
+  <image path="images/lcloud-capture.2011.02.22 21.29.08.png" width="340" height="340" thumb="thumbs/lcloud-capture.2011.02.22 21.29.08.png" thumbwidth="200" thumbheight="200"/>
+</project>

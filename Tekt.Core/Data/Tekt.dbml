@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="C:\USERS\THEZER0IST\TETKSYS\TETKSYS\TEKT.WEB\APP_DATA\TEKTDEVDB.MDF" EntityNamespace="Tekt.Core.Data.Entities" Class="TektDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\v11.0;Initial Catalog=C:\USERS\THEZER0IST\TETKSYS\TETKSYS\TEKT.WEB\APP_DATA\TEKTDEVDB.MDF;Integrated Security=True" SettingsObjectName="Tekt.Core.Properties.Settings" SettingsPropertyName="C__USERS_THEZER0IST_TETKSYS_TETKSYS_TEKT_WEB_APP_DATA_TEKTDEVDB_MDFConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Projects" Member="Projects">
+    <Type Name="Project">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Key]" Member="Key" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Summary" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Properties" Member="PropertiesJson" AccessModifier="Private" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Project_ItemProject" Member="ProjectItems" ThisKey="Id" OtherKey="ProjectId" Type="ItemProject" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Items" Member="Items">
+    <Type Name="Item">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Key]" Member="Key" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DetailUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ContentUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Width" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Height" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThumbWidth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThumbHeight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThumbUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Properties" Member="PropertiesJson" AccessModifier="Private" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Updated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Item_ItemProject" Member="ItemProjects" ThisKey="Id" OtherKey="ItemId" Type="ItemProject" />
+      <Type Name="Commit" />
+      <Type Name="Image" />
+      <Type Name="BlogEntry" />
+      <Type Name="Video" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ItemProjects" Member="ItemProjects">
+    <Type Name="ItemProject">
+      <Column Name="ItemId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Item_ItemProject" Member="Item" ThisKey="ItemId" OtherKey="Id" Type="Item" IsForeignKey="true" />
+      <Association Name="Project_ItemProject" Member="Project" ThisKey="ProjectId" OtherKey="Id" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

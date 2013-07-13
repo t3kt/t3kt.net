@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+@{
+    ViewBag.Mobile = false;
+}
+<html>
+<head>
+    <title>tekt: @ViewBag.Title</title>
+    <link rel="shortcut icon" href="@Url.Content("/Resources/favicon.png")" />
+    <link rel="stylesheet" href="//reset5.googlecode.com/hg/reset.min.css"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Resources/shared.css")"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Resources/main.css")" media="(min-device-width: 801px)"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Resources/mobile.css")" media="(max-device-width: 800px)"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.2.0/jquery.pjax.min.js"></script>
+    <script src="~/Resources/tekt.js"></script>
+    @RenderSection("head", false)
+</head>
+    <body>
+        <header>
+            <h1>@Html.ActionLink("tekt", "Index", "Home")</h1>
+            <h2 class="t-ui-panel">@ViewBag.Title</h2>
+        </header>
+        @Html.Partial("NavMenu")
+        <div id="main" data-role="page" class="t-ui-panel">
+            @RenderBody()
+        </div>
+        @Html.Partial("Analytics")
+    </body>
+</html>

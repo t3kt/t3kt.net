@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.75, 8.5" name="Tekt">
+  <DataContextMoniker Name="/TektDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2d60a3a0-ac3b-41d1-9504-430a982eadad" absoluteBounds="9.5, 5.25, 2, 0.8093896484375005">
+      <DataClassMoniker Name="/TektDataContext/Video" />
+      <nestedChildShapes>
+        <elementListCompartment Id="455fd50b-4dc0-48ae-b4e3-a9c02c7cf5d5" absoluteBounds="9.5, 5.25, 0.125, 0.2493896484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b36071d-f0bb-40a5-9ce3-1b5207766566" absoluteBounds="6.75, 5.25, 2, 0.8093896484375005">
+      <DataClassMoniker Name="/TektDataContext/BlogEntry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1490e254-8ce4-4f6d-9392-8f4abe726f83" absoluteBounds="6.75, 5.25, 0.125, 0.2493896484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d184b338-68d2-46cc-98e6-850653110590" absoluteBounds="4, 5.25, 2, 0.8093896484375005">
+      <DataClassMoniker Name="/TektDataContext/Image" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d91cd63-f1a4-4358-9c68-431fe773a11a" absoluteBounds="4, 5.25, 0.125, 0.2493896484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66162177-8bb2-4e43-9a6f-ae1de32dcccf" absoluteBounds="1.25, 5.25, 2, 0.8093896484375005">
+      <DataClassMoniker Name="/TektDataContext/Commit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27f1b3fd-5b02-4452-88c8-8d71fc7a1181" absoluteBounds="1.25, 5.25, 0.125, 0.2493896484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="82527558-29b5-444b-9ee4-220f1b59f236" absoluteBounds="1.625, 1.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/TektDataContext/Project" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55c32bac-8ee6-41c3-a702-545c6f91b668" absoluteBounds="1.6400000000000001, 1.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ce46837a-e45d-4d22-a3a2-6a651fe2efad" absoluteBounds="7, 0.875, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/TektDataContext/Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c0c0ae6-cdd4-4901-b97b-f994b62efb40" absoluteBounds="7.0150000000000006, 1.335, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <inheritanceConnector edgePoints="[(8 : 4.5689111328125); (8 : 4.875); (2.25 : 4.875); (2.25 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="ce46837a-e45d-4d22-a3a2-6a651fe2efad" />
+        <classShapeMoniker Id="66162177-8bb2-4e43-9a6f-ae1de32dcccf" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(8 : 4.5689111328125); (8 : 4.875); (5 : 4.875); (5 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="ce46837a-e45d-4d22-a3a2-6a651fe2efad" />
+        <classShapeMoniker Id="d184b338-68d2-46cc-98e6-850653110590" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(8 : 4.5689111328125); (8 : 4.875); (7.75 : 4.875); (7.75 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="ce46837a-e45d-4d22-a3a2-6a651fe2efad" />
+        <classShapeMoniker Id="9b36071d-f0bb-40a5-9ce3-1b5207766566" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(8 : 4.5689111328125); (8 : 4.875); (10.5 : 4.875); (10.5 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="ce46837a-e45d-4d22-a3a2-6a651fe2efad" />
+        <classShapeMoniker Id="2d60a3a0-ac3b-41d1-9504-430a982eadad" />
+      </nodes>
+    </inheritanceConnector>
+    <classShape Id="7a3d9914-4ba7-470d-8766-5ae3c465244f" absoluteBounds="4.25, 1.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/TektDataContext/ItemProject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4be00c57-45ed-486b-b211-eb9d72d477fe" absoluteBounds="4.265, 2.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7 : 2.47199625651042); (6.25 : 2.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TektDataContext/Item/Item_ItemProject" />
+      <nodes>
+        <classShapeMoniker Id="ce46837a-e45d-4d22-a3a2-6a651fe2efad" />
+        <classShapeMoniker Id="7a3d9914-4ba7-470d-8766-5ae3c465244f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.625 : 2.47199625651042); (4.25 : 2.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TektDataContext/Project/Project_ItemProject" />
+      <nodes>
+        <classShapeMoniker Id="82527558-29b5-444b-9ee4-220f1b59f236" />
+        <classShapeMoniker Id="7a3d9914-4ba7-470d-8766-5ae3c465244f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

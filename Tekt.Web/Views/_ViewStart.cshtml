@@ -1,0 +1,14 @@
+﻿@{
+    if (Request.Url != null && Request.Url.Host == "m.t3kt.net" || Request.Params["mobile"] == "1")
+    {
+        Layout = "~/Views/Shared/MobileLayout.cshtml";
+    }
+    else if(Request.Headers["X-PJAX"] != null)
+    {
+        Layout = "~/Views/Shared/PJaxLayout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/SiteLayout.cshtml";
+    }
+}

@@ -1,0 +1,28 @@
+﻿@model Tekt.Core.Entities.BlogEntry
+<article class="blog-entry project-item" id="@Model.Id">
+    <span class="t-icon t-icon-blog"></span>
+    <div class="project-item-date">@Model.Posted</div>
+    <h3>
+        @if(Model.DetailUrl != null)
+        {
+            <a href="@Model.DetailUrl" target="_blank">@Model.Title</a>
+        }
+        else
+        {
+            @Model.Title
+        }
+    </h3>
+    <div class="project-item-content">
+        @Html.Raw(Model.Content)
+    </div>
+    @if(Model.Categories.Except(new[] { "t3kt.net" }).Any())
+    {
+        <div class="blog-entry-categories">
+            <span class="blog-entry-categories-label">categories: </span>
+            @foreach(var category in Model.Categories.Except(new[] { "t3kt.net" }))
+            {
+                @Html.ActionLink(category, "Category", "News", new RouteValueDictionary { { "id", category } }, new Dictionary<string, object> { { "class", "t-tag" } })
+            }
+        </div>
+    }
+</article>
