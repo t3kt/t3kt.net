@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <index basepath="Projects/">
+  <entry id="DynamicStructure" path="DynamicStructure/DynamicStructure.xml" title="DynamicStructure"/>
   <entry id="LinearChaosC" path="LinearChaosC/LinearChaosC.xml" title="LinearChaos C"/>
   <entry id="LinearChaosB" path="LinearChaosB/LinearChaosB.xml" title="LinearChaos B"/>
   <entry id="LinearChaosA" path="LinearChaosA/LinearChaosA.xml" title="LinearChaos A"/>
