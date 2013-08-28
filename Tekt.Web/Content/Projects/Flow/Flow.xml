@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project id="Flow" title="Flow"
+         basepath="Projects/Flow/"
+         blogcategories="flow"
+         flickrsetid="72157635260604129"
+         vimeoalbumid="2507048"
+         githubrepo="Flow">
+  <description>
+    <p>
+      Flow is a visual performance systems made with <a href="http://www.derivative.ca/" target="_blank">TouchDesigner</a>.<br/>
+      It is based on particle systems.
+    </p>
+    <p>The code for this project is available here: <a href="https://github.com/t3kt/flow" target="_blank">on github</a>.</p>
+  </description>
+  <mainimage path="flow.jpg" thumb="flow-thumb.jpg" thumbwidth="480" thumbheight="270"/>
+</project>
