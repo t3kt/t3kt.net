@@ -130,9 +130,16 @@
     <Content Include="Content\Projects\DynamicStructure\DynamicStructure.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Content\Projects\Flow\flow-thumb.jpg" />
+    <Content Include="Content\Projects\Flow\flow.jpg" />
+    <Content Include="Content\Projects\Flow\Flow.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Resources\blogger-32.png" />
     <Content Include="Resources\favicon.png" />
-    <Content Include="Content\Projects\index.xml" />
+    <Content Include="Content\Projects\index.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\Projects\LCloud\images\lcloud-capture.2011.02.22 21.29.08.png" />
     <Content Include="Content\Projects\LCloud\images\lcloud-capture.2011.02.22 21.29.44.png" />
     <Content Include="Content\Projects\LCloud\images\lcloud-capture.2011.02.22 21.34.42.png" />
@@ -388,6 +395,7 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Resources\_common.less" />

@@ -8,7 +8,7 @@
   <description>
     <p>
       Flow is a visual performance systems made with <a href="http://www.derivative.ca/" target="_blank">TouchDesigner</a>.<br/>
-      It is based on particle systems.
+      It explores the interplay of forces on a particle system.
     </p>
     <p>The code for this project is available here: <a href="https://github.com/t3kt/flow" target="_blank">on github</a>.</p>
   </description>
