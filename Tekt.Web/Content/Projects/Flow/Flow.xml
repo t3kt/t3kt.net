@@ -5,12 +5,85 @@
          flickrsetid="72157635260604129"
          vimeoalbumid="2507048"
          githubrepo="Flow">
+  <summary>
+    <p>Flow is a visual performance systems made with <a href="http://www.derivative.ca/" target="_blank">TouchDesigner</a>.<br/>
+It explores the interplay of forces on a particle system.</p>
+<p>The code for this project is available here: <a href="https://github.com/t3kt/flow" target="_blank">on github</a>.</p>
+  </summary>
   <description>
-    <p>
-      Flow is a visual performance systems made with <a href="http://www.derivative.ca/" target="_blank">TouchDesigner</a>.<br/>
-      It explores the interplay of forces on a particle system.
-    </p>
-    <p>The code for this project is available here: <a href="https://github.com/t3kt/flow" target="_blank">on github</a>.</p>
+    <p>Flow is a visual performance systems made with <a href="http://www.derivative.ca/" target="_blank">TouchDesigner</a>.<br/>
+It explores the interplay of forces on a particle system.</p>
+<p>The code for this project is available here: <a href="https://github.com/t3kt/flow" target="_blank">on github</a>.</p>
+
+<hr/>
+<h2>General Structure</h2>
+<p>The Flow system is comprised of several, relatively self-contained sub-systems. These sub-systems, and the general data flow are roughly the same as in the LinearChaos and DynamicStructure projects.</p>
+
+<ul>
+<li>Geometry (3D)</li>
+<li>Materials / Lights / Camera (/Action!)</li>
+<li>Rendering</li>
+<li>Post-Processing (2D)</li>
+<li>Control Routing / Processing / MIDI</li>
+<li>Control GUI</li>
+<li>Audio Input / Analysis</li>
+<li>Output / Recording</li>
+</ul><p>The primary data flow is arranged like this:</p>
+
+<pre><code>               Geometry --&gt; \
+                             ---&gt; Rendering ---&gt; Post-Processing ---&gt; Output/Recording
+Materials/Lights/Camera --&gt; /
+</code></pre>
+
+<p>The secondary control data flow is arranged like this:</p>
+
+<pre><code>                                                Audio Analysis ---&gt; \
+                                                                     ---&gt; Geometry / Materials / etc
+Config/Defaults ---&gt; \                                              /
+                      ---&gt; GUI ---&gt; Control Recording/Playback ---&gt;
+     MIDI Input ---&gt; /                                              \
+                                                                     ---&gt; MIDI Output
+
+</code></pre>
+
+<hr/>
+<h2>Geometry Systems</h2>
+
+<p>The Geometry system in Flow is based on the interplay of forces acting on a particle system. There are only a few visible geometry elements:</p>
+
+<ol>
+<li> the particle system</li>
+<li> the force fields</li>
+<li> the core collision sphere</li>
+<li> the grid (though this isn't used much and might be removed)</li>
+</ol>
+<h3>The Particle System</h3>
+
+<p>The particle system is displayed as light blue/white particle sprites. The small size and density of the particle field tends to make these look more like a fluid than individual particles.
+The particles have several parameters which control their behavior and the impact of various forces upon them.</p>
+
+<ul>
+<li><strong>fluidity</strong> - controls the rigidity of the particles and how easily they move and how heavily forces and turbulence influence them</li>
+<li>
+<strong>mass</strong> - controls the mass of the particles, which in turn impacts their momentum.
+<blockquote>NOTE: Using a high mass along with a high fluidity tends to result in the particles getting flung out away from the core.</blockquote>
+</li>
+</ul>
+<p>The particles are initially dispursed on a heavily randomized grid (it started as a grid and now looks like a multi-layered spiky thing). From there a series of influences are applied which modify their position and state.</p>
+
+<h3>Turbulence, Wind, and Collisions</h3>
+
+<p>The turbulence forces are randomly (but smoothly) oscillating to some extent at most times. The <strong>turbulence</strong> parameter at both high and low extremes result in strong small- or large-scale turbulence, whereas in the middle there is very weak turbulence.
+The wind is applied in sine waves which oscillate at relatively constant rates, in order to keep the particles moving to some extent at all times.
+The core collision sphere is a surface which the particles stick to when they hit it. They remain stuck to the surface of the sphere until they die off.</p>
+
+<h3>Primary (Attractor) Force Fields</h3>
+
+<p>The primary (attractor) force fields are a set of two triangles with a metaball on each corner. The two triangles alternately rotate around the center and the metaballs attached to each vertex rotate along with them. The triangles are never both rotate at the same time. Because they overlap, all six metaballs end up forming a single blob shape. Each of the six force fields applies a force to the particles which either pulls them toward the field's center, or pushes them away from it. One group of the fields is the main force, and the other is a weaker opposite force (pushing when the main one is pulling, etc). The <strong>attractor pull</strong> parameter controls the strength and direction (push vs pull) of these forces. These forces are applied as part of the particle calculations, and therefore are subject to things like the collision surface and <strong>fluidity</strong> and <strong>mass</strong>.</p>
+
+<h3>Secondary Warp Fields</h3>
+
+<p>The secondary warp fields are a set of force fields, several of which are based on enlarged copies of the attractor fields, apply a second phase of "force" to the particles. They apply rotational forces which mean that they behave very differently from the primary force fields in several ways. First, they are applied after the particle calculations, so they are not directly impacted by collision, etc (one neat result of this is that particles which are stuck to the core still get warped out of their "stucK' position). Second, they do not direclty impact the state of the particles, so they do not cause changes in momentum.</p>
   </description>
   <mainimage path="flow.jpg" thumb="flow-thumb.jpg" thumbwidth="480" thumbheight="270"/>
 </project>
